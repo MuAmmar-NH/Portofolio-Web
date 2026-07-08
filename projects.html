@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="header-footer.css">
+    <link rel="stylesheet" href="projects.css">
+    <link rel="icon" type="image/x-icon" href="assets/logo-tab.png">
+    <title>Projects - Muammar Nur Hakim</title>
+</head>
+<body>
+    <header>
+        <div class="hamburger">☰</div>
+        <div class="nav">
+            <div class="container">
+                <!-- Menggunakan data-url agar rapi dan ditangani oleh JS -->
+                <div class="btn" data-url="index.html">Home</div>
+                <div class="btn" data-url="profile.html">Profile</div>
+                <div class="btn" data-url="projects.html">Projects</div>
+                <div class="btn" data-url="experience.html">Experience</div>
+                <div class="btn" data-url="social-media.html">Social Media</div>
+                
+                <svg class="outline" overflow="visible" width="800" height="60" viewBox="0 0 800 60" xmlns="http://www.w3.org/2000/svg">
+                    <rect class="rect" pathLength="100" x="0" y="0" width="800" height="60" stroke-width="5" fill="transparent"></rect>
+                </svg>
+            </div>
+        </div>
+    </header>
+    
+    <main>
+        <section class="projects-header">
+            <h1>My Projects</h1>
+            <p>Here is a showcase of some of my recent work.</p>
+        </section>
+
+        <section class="projects-grid">
+            
+            <!-- Proyek 1 -->
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="https://images.unsplash.com/photo-1555664424-778a1e5e1b48?w=500&h=300&fit=crop" alt="IFRIT Fire Detection & Monitoring Project">
+                </div>
+                <div class="project-content">
+                    <h2>IFRIT Fire Detection & Monitoring</h2>
+                    <p>An integrated fire detection system combining Computer Vision, IoT sensors (DHT22, MQ series), and real-time WhatsApp notifications to prevent fire hazards effectively.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">IoT</span>
+                        <span class="tech-tag">ESP32</span>
+                        <span class="tech-tag">Computer Vision</span>
+                        <span class="tech-tag">WhatsApp API</span>
+                        <span class="tech-tag">React.js</span>
+                    </div>
+                    <a href="https://github.com/MawanRequiem/AgniRakhsa-FireDetection" class="btn-project">View Details</a>
+                </div>
+            </div>
+
+            <!-- Proyek 2 -->
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="assets/book.jpg" alt="Litera Book Store Project">
+                </div>
+                <div class="project-content">
+                    <h2>Litera Book Store</h2>
+                    <p>A simple book store management system built with modern web technologies with framework bootstrap.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Bootstrap</span>
+                    </div>
+                    <a href="https://github.com/MuAmmar-NH/Litera-Book-Store" class="btn-project">View Details</a>
+                </div>
+            </div>
+
+            <!-- Proyek 3 -->
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="assets/dicoding API.png" alt="Customer Churn Project">
+                </div>
+                <div class="project-content">
+                    <h2>Dicoding Story</h2>
+                    <p>A website that allows users to upload images (stories) with location tags selected via an API</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">SPA</span>
+                        <span class="tech-tag">PWA</span>
+                        <span class="tech-tag">API Integration</span>
+                        <span class="tech-tag">Service Worker</span>
+                    </div>
+                    <a href="https://github.com/MuAmmar-NH/Dicoding-Story/tree/master" class="btn-project">View Details</a>
+                </div>
+            </div>
+
+            <!-- Proyek 4 -->
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="assets/movie-icon.jpg" alt="CineZone App Project">
+                </div>
+                <div class="project-content">
+                    <h2>CineZone App</h2>
+                    <p>A movie discovery app that allows users to browse and search for movies and series with detailed information and trailers</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Figma</span>
+                        <span class="tech-tag">User Research</span>
+                    </div>
+                    <a href="https://www.figma.com/design/SrfMXEtrlka0Q78pSngibb/Projek-hci?node-id=0-1&p=f&t=fNWM3sqjgcJgaQLF-0" class="btn-project">View Details</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Muammar Nur Hakim. All Rights Reserved.</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>

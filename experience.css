@@ -1,0 +1,205 @@
+/* =========================================
+   STYLING KHUSUS HALAMAN EXPERIENCE
+   ========================================= */
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    color: #333;
+    min-height: calc(100vh - 180px);
+}
+
+.experience-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.experience-header h1 {
+    font-size: 2.5rem;
+    color: #0a5b76;
+    margin-bottom: 15px;
+}
+
+.experience-header p {
+    font-size: 1.15rem;
+    color: #555;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* --- JUDUL BAGIAN (Education & Courses) --- */
+.section-title {
+    font-size: 1.8rem;
+    color: #0a5b76;
+    margin-bottom: 30px;
+    padding-left: 15px;
+    border-left: 5px solid #0a5b76; /* Aksen garis biru kecil di sebelah kiri judul */
+}
+
+.timeline-section {
+    margin-bottom: 60px;
+}
+
+/* --- KOMPONEN TIMELINE --- */
+.timeline {
+    position: relative;
+    padding-left: 40px; /* Memberi ruang untuk garis dan titik timeline */
+}
+
+/* Garis lurus vertikal timeline */
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 11px; /* Posisi garis di sebelah kiri */
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: #e0e5ec;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+/* Menghilangkan margin bawah pada item terakhir */
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+/* Titik lingkaran pada timeline */
+.timeline-dot {
+    position: absolute;
+    left: -40px; /* Menarik titik ke kiri tepat di atas garis vertikal */
+    top: 5px;
+    width: 24px;
+    height: 24px;
+    background-color: #0a5b76;
+    border: 4px solid #f9fbfd; /* Warna sama dengan background body agar terlihat terpotong */
+    border-radius: 50%;
+    z-index: 2;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* --- KARTU KONTEN TIMELINE --- */
+.timeline-content {
+    background-color: #ffffff;
+    padding: 25px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border-left: 4px solid transparent;
+    transition: all 0.3s ease;
+    margin-bottom: 40px;
+    
+    /* Mengubah display menjadi flex untuk menyandingkan gambar dan teks */
+    display: flex;
+    gap: 20px;
+    align-items: flex-start; /* Memastikan konten sejajar di atas */
+}
+
+.timeline-content:hover {
+    transform: translateX(5px); 
+    border-left: 4px solid #0a5b76; 
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* --- AREA GAMBAR DI DALAM KARTU --- */
+.timeline-image {
+    width: 80px;  /* Ukuran lebar kotak gambar */
+    height: 80px; /* Ukuran tinggi kotak gambar */
+    flex-shrink: 0; /* Mencegah gambar mengecil tertekan teks */
+    border-radius: 8px; /* Sudut sedikit membulat */
+    overflow: hidden;
+    border: 1px solid #eef2f5;
+    background-color: #f9fbfd; /* Berjaga-jaga jika logo transparan (PNG) */
+}
+
+.timeline-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; 
+}
+
+/* --- AREA TEKS DI DALAM KARTU --- */
+.timeline-text {
+    flex-grow: 1; /* Teks mengambil sisa ruang kosong */
+    display: flex;
+    flex-direction: column;
+}
+
+.timeline-date {
+    display: inline-block;
+    background-color: #eef2f5;
+    color: #0a5b76;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    margin-bottom: 12px;
+    align-self: flex-start; /* Menjaga label tanggal tetap pendek */
+}
+
+.timeline-text h3 {
+    font-size: 1.4rem;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.timeline-text h4 {
+    font-size: 1.05rem;
+    color: #0a5b76;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+.timeline-text p {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* --- LINK EKSTERNAL / TOMBOL --- */
+.timeline-link {
+    display: inline-block;
+    margin-top: 15px;
+    color: #0a5b76;
+    font-weight: bold;
+    font-size: 0.95rem;
+    text-decoration: none; /* Menghilangkan garis bawah default */
+    transition: color 0.3s ease;
+    align-self: flex-start;
+}
+
+.timeline-link:hover {
+    color: #074155;
+    text-decoration: underline; /* Garis bawah muncul saat di-hover */
+}
+
+/* --- RESPONSIVE UNTUK HP --- */
+@media (max-width: 600px) {
+    .timeline {
+        padding-left: 30px;
+    }
+    
+    .timeline::before {
+        left: 9px;
+    }
+
+    .timeline-dot {
+        left: -30px;
+        width: 20px;
+        height: 20px;
+    }
+    
+    .timeline-content {
+        padding: 20px;
+        flex-direction: column; /* Gambar akan pindah ke atas teks di layar HP */
+    }
+    
+    .timeline-image {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 10px; /* Jarak antara gambar ke judul jika di HP */
+    }
+}

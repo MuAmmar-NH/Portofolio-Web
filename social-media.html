@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="header-footer.css">
+    <link rel="stylesheet" href="social-media.css">
+    <link rel="icon" type="image/x-icon" href="assets/logo-tab.png">
+    
+    <!-- WAJIB DITAMBAHKAN: Link CDN FontAwesome untuk memunculkan ikon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <title>Social Media - Muammar Nur Hakim</title>
+</head>
+<body>
+    <header>
+        <div class="hamburger">☰</div>
+        <div class="nav">
+            <div class="container">
+                <!-- Menggunakan data-url agar rapi dan ditangani oleh JS -->
+                <div class="btn" data-url="index.html">Home</div>
+                <div class="btn" data-url="profile.html">Profile</div>
+                <div class="btn" data-url="projects.html">Projects</div>
+                <div class="btn" data-url="experience.html">Experience</div>
+                <div class="btn" data-url="social-media.html">Social Media</div>
+                
+                <svg class="outline" overflow="visible" width="800" height="60" viewBox="0 0 800 60" xmlns="http://www.w3.org/2000/svg">
+                    <rect class="rect" pathLength="100" x="0" y="0" width="800" height="60" stroke-width="5" fill="transparent"></rect>
+                </svg>
+            </div>
+        </div>
+    </header>
+    
+    <main>
+        <div class="social-header">
+            <h1>My Social Media</h1>
+            <p>Connect with me on my social media profiles.</p>
+        </div>
+
+        <ul class="wrapper">
+            <!-- Instagram -->
+            <li class="icon instagram" onclick="window.open('https://www.instagram.com/muammar_nh/', '_blank')">
+                <span class="tooltip">Instagram</span>
+                <span><i class="fab fa-instagram"></i></span>
+            </li>
+            
+            <!-- GitHub -->
+            <li class="icon github" onclick="window.open('https://github.com/MuAmmar-NH', '_blank')">
+                <span class="tooltip">GitHub</span>
+                <span><i class="fab fa-github"></i></span>
+            </li>
+            
+            <!-- LinkedIn -->
+            <li class="icon linkedin" onclick="window.open('https://www.linkedin.com/in/muammar-nur-hakim-480264291/', '_blank')">
+                <span class="tooltip">LinkedIn</span>
+                <span><i class="fab fa-linkedin-in"></i></span>
+            </li>
+            
+            <!-- X (Twitter) -->
+            <li class="icon x" onclick="window.open('https://x.com/skymar04', '_blank')">
+                <span class="tooltip">X</span>
+                <span><i class="fab fa-x-twitter"></i></span>
+            </li>
+            
+            <!-- TikTok -->
+            <li class="icon tiktok" onclick="window.open('https://www.tiktok.com/@muammar_nur_hakim', '_blank')">
+                <span class="tooltip">TikTok</span>
+                <span><i class="fab fa-tiktok"></i></span>
+            </li>
+        </ul>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Muammar Nur Hakim. All Rights Reserved.</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>

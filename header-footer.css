@@ -1,0 +1,184 @@
+/* Reset dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    /* Wajib ditambahkan agar konten (h1, p) tidak tertutup oleh header yang menempel di atas */
+    padding-top: 80px; 
+}
+
+/* 1. HEADER MENEMPEL & FULL WIDTH */
+header {
+    position: fixed; /* Menempel di atas saat discroll */
+    top: 0;
+    left: 0;
+    width: 100%; /* Lebar dari ujung ke ujung layar */
+    background:#0a5b76; /* Warna background dipindah ke header */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* Opsional: Efek bayangan */
+    z-index: 1000; /* Pastikan selalu berada paling depan */
+}
+
+/* Menu diletakkan di tengah background header */
+.nav {
+    position: relative;
+    width: 800px; /* Lebar area menu */
+    height: 60px;
+    margin: 0 auto; /* Membuat posisi menu berada di tengah layar */
+}
+
+.container {
+    position: absolute;
+    inset: 0;
+    display: flex;
+}
+
+.container .btn {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: #ffffff; /* Warna teks menu */
+    transition: 0.3s;
+    z-index: 2; /* Pastikan tombol berada di atas garis */
+}
+
+.btn {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: #000000;
+    transition: 0.3s;
+    z-index: 2;
+}
+
+.btn:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.outline {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* 2. GARIS DISEMBUNYIKAN SECARA DEFAULT */
+.rect {
+    stroke-dashoffset: 0;
+    transition: stroke-dasharray 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+    stroke: #8b7e7e;
+    opacity: 0; /* Garis hilang/transparan saat kursor belum menyentuh */
+}
+
+/* Tampilkan garis kembali jika area header/menu tersentuh kursor */
+.nav:hover .rect {
+    opacity: 1;
+}
+
+/* 
+  Kalkulasi matematika SVG baru untuk lebar 800px dan tinggi 60px.
+  Total keliling = 1720px. Rumus persentasenya telah disesuaikan agar akurat 100%.
+*/
+.btn:nth-child(1):hover ~ svg .rect { stroke-dasharray: 9.30 77.91 9.30 3.49; }
+.btn:nth-child(2):hover ~ svg .rect { stroke-dasharray: 0 9.30 9.30 59.31 9.30 12.79; }
+.btn:nth-child(3):hover ~ svg .rect { stroke-dasharray: 0 18.60 9.30 40.69 9.30 22.11; }
+.btn:nth-child(4):hover ~ svg .rect { stroke-dasharray: 0 27.91 9.30 22.09 9.30 31.40; }
+.btn:nth-child(5):hover ~ svg .rect { stroke-dasharray: 0 37.21 9.30 3.49 9.30 40.70; }
+
+/* Efek hover biasa */
+.nav .btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* PENANDA HALAMAN AKTIF */
+.nav .btn.active {
+    background: rgba(255, 255, 255, 0.3); /* Background sedikit lebih terang dari hover */
+    font-weight: bold; /* Teks menjadi tebal */
+    border-bottom: 3px solid #ffffff; /* Garis bawah sebagai penanda ekstra */
+}
+
+/* =========================================
+   RESPONSIVE NAVBAR (MOBILE & TABLET)
+   ========================================= */
+
+/* Atur posisi header agar bisa menampung hamburger di atas */
+header {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Desain awal Hamburger Icon (Sembunyi di Laptop/PC) */
+.hamburger {
+    display: none;
+    font-size: 28px;
+    color: #ffffff;
+    cursor: pointer;
+    padding: 15px 25px;
+    align-self: flex-end; /* Memosisikan ikon di ujung kanan */
+    user-select: none;
+}
+
+@media (max-width: 850px) {
+    /* Munculkan Hamburger di HP */
+    .hamburger {
+        display: block; 
+    }
+    
+    /* Sembunyikan menu secara default */
+    .nav {
+        width: 100%;
+        height: 0; /* Tinggi 0 berarti tertutup */
+        overflow: hidden;
+        transition: height 0.3s ease; /* Animasi buka/tutup mulus */
+    }
+
+    /* Class ini akan dipicu oleh JavaScript saat hamburger diklik */
+    .nav.active-menu {
+        height: 250px; /* Cukup untuk menampung 5 menu */
+    }
+
+    .container {
+        position: static; /* Membatalkan posisi melayang */
+        flex-direction: column; /* Menyusun menu dari atas ke bawah */
+    }
+
+    .nav .btn {
+        flex: none; /* Membatalkan pembagian lebar sama rata */
+        padding: 15px 25px;
+        justify-content: flex-start; /* Teks menu rata kiri */
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    /* Sembunyikan animasi garis SVG karena tidak cocok untuk vertikal */
+    .outline {
+        display: none;
+    }
+
+    /* Ubah desain penanda halaman aktif untuk HP */
+    .nav .btn.active {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        border-left: 5px solid #ffffff; /* Penanda pindah berupa garis kiri */
+        background: rgba(255, 255, 255, 0.1);
+    }
+}
+
+/* =========================================
+   STYLING UNTUK FOOTER
+   ========================================= */
+
+footer {
+    background-color: #0a5b76; /* Warna biru solid senada dengan judul dan tombol */
+    color: #ffffff; /* Warna teks putih */
+    text-align: center; /* Teks rata tengah */
+    padding: 25px 20px; /* Jarak ruang di dalam footer */
+    margin-top: 60px; /* Jarak dari konten terakhir di main */
+    font-size: 0.95rem;
+    letter-spacing: 0.5px; /* Memberi sedikit rongga antar huruf */
+}

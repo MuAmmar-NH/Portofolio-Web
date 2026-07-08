@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="header-footer.css">
+    <link rel="icon" type="image/x-icon" href="assets/logo-tab.png">
+    <title>Porto Web</title>
+</head>
+<body>
+    <header>
+        <div class="hamburger">☰</div>
+        <div class="nav">
+            <div class="container">
+                <!-- Menggunakan data-url agar rapi dan ditangani oleh JS -->
+                <div class="btn" data-url="index.html">Home</div>
+                <div class="btn" data-url="profile.html">Profile</div>
+                <div class="btn" data-url="projects.html">Projects</div>
+                <div class="btn" data-url="experience.html">Experience</div>
+                <div class="btn" data-url="social-media.html">Social Media</div>
+                
+                <svg class="outline" overflow="visible" width="800" height="60" viewBox="0 0 800 60" xmlns="http://www.w3.org/2000/svg">
+                    <rect class="rect" pathLength="100" x="0" y="0" width="800" height="60" stroke-width="5" fill="transparent"></rect>
+                </svg>
+            </div>
+        </div>
+    </header>
+    
+    <main>
+        <section class="hero-section">
+            <img src="assets/pas foto.jpg" alt="Foto Muammar" class="profile-img">
+            <h1>Hi, My name is Muammar Nur Hakim</h1>
+            <h2>I'm Student of Informatics Engineering</h2>
+            <p>This is my personal portfolio website. Scroll down to see more!</p>
+        </section>
+
+        <section class="content-section box-area">
+            <div class="box-image">
+                <img src="assets/foto gaya.jpeg" alt="Profile Picture">
+            </div>
+            <div class="box-text">
+                <h1>Profile</h1>
+                <p>Here is some information about me.</p>
+                <!-- Menambahkan data-url untuk tombol aksi -->
+                <button class="btn" data-url="profile.html">Read More</button>
+            </div>
+        </section>
+
+        <section class="content-section box-area">
+            <div class="box-image">
+                <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=500&h=500&fit=crop" alt="My Projects">
+            </div>
+            <div class="box-text">
+                <h1>Projects</h1>
+                <p>Here are some of my projects.</p>
+                <!-- Menambahkan data-url untuk tombol aksi -->
+                <button class="btn" data-url="projects.html">View Projects</button>
+            </div>
+        </section>
+
+        <section class="content-section box-area">
+            <div class="box-image">
+                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=500&h=500&fit=crop" alt="My Experience">
+            </div>
+            <div class="box-text">
+                <h1>Experience</h1>
+                <p>I have experience working on several projects.</p>
+                <!-- Menambahkan data-url untuk tombol aksi -->
+                <button class="btn" data-url="experience.html">View Experience</button>
+            </div>
+        </section>
+
+        <section class="social-section">
+            <h1>Social Media</h1>
+            <p>Connect with me on social media and let's build something great together.</p>
+            <!-- Menambahkan data-url untuk tombol aksi -->
+            <button class="btn" data-url="social-media.html">Follow Me</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Muammar Nur Hakim. All Rights Reserved.</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>

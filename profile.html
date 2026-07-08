@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="header-footer.css">
+    <link rel="icon" type="image/x-icon" href="assets/logo-tab.png">
+    <title>Profile - Muammar Nur Hakim</title>
+</head>
+<body>
+    <header>
+        <div class="hamburger">☰</div>
+        <div class="nav">
+            <div class="container">
+                <!-- Menggunakan data-url agar rapi dan ditangani oleh JS -->
+                <div class="btn" data-url="index.html">Home</div>
+                <div class="btn" data-url="profile.html">Profile</div>
+                <div class="btn" data-url="projects.html">Projects</div>
+                <div class="btn" data-url="experience.html">Experience</div>
+                <div class="btn" data-url="social-media.html">Social Media</div>
+                
+                <svg class="outline" overflow="visible" width="800" height="60" viewBox="0 0 800 60" xmlns="http://www.w3.org/2000/svg">
+                    <rect class="rect" pathLength="100" x="0" y="0" width="800" height="60" stroke-width="5" fill="transparent"></rect>
+                </svg>
+            </div>
+        </div>
+    </header>
+    
+    <main>
+        <!-- Bagian Biodata -->
+        <section class="profile-header">
+            <img src="assets/foto gaya 2.jpeg" alt="Foto Muammar" class="profile-img">
+            <h1>About Me</h1>
+            
+            <!-- Menggunakan struktur list (ul/li) yang rapi di dalam sebuah kartu -->
+            <div class="profile-info-card">
+                <ul>
+                    <li>
+                        <strong>Name</strong> 
+                        <span>Muammar Nur Hakim</span>
+                    </li>
+                    <li>
+                        <strong>Place & Date of Birth</strong> 
+                        <span>Jakarta, November 27, 2004</span>
+                    </li>
+                    <li>
+                        <strong>Address</strong> 
+                        <span>Perumahan Griya Asri Wika Blok C2 No. 10, RT. 005/RW. 005, Kelurahan JatiRanggon, Kecamatan JatiSampurna, Kota Bekasi, Provinsi Jawa Barat Kode Pos 17432</span>
+                    </li>
+                    <li>
+                        <strong>Gender</strong> 
+                        <span>Male</span>
+                    </li>
+                    <li>
+                        <strong>Phone</strong> 
+                        <span>+62 821-141-8761</span>
+                    </li>
+                    <li>
+                        <strong>Email</strong> 
+                        <span>muammarnh27@gmail.com</span>
+                    </li>
+                    <li>
+                        <strong>Work</strong> 
+                        <span>Student</span>
+                    </li>
+                    <li>
+                        <strong>University</strong> 
+                        <span>Politeknik Negeri Jakarta (PNJ)</span>
+                        <span>CCIT FTUI</span>
+                    </li>
+                    <li>
+                        <strong>Major</strong> 
+                        <span>Informatics Engineering</span>
+                        <span>Software Engineering</span>
+                    </li>
+                    <li class="hobbies-row">
+                        <strong>Hobbies</strong>
+                        <div class="hobby-tags">
+                            <span class="tag">Playing Games</span>
+                            <span class="tag">Watching Movies</span>
+                            <span class="tag">Reading Books</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Bagian Kemampuan / Minat -->
+        <section class="skills-section">
+            <h2>Areas of Interest & Expertise</h2>
+            <div class="skills-grid">
+                
+                <div class="skill-card">
+                    <h3>UI/UX Design</h3>
+                    <p>Experienced in creating intuitive and engaging user interfaces and experiences.</p>
+                    <ul>
+                        <li>Figma</li>
+                        <li>User Research</li>
+                    </ul>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Frontend Development</h3>
+                    <p>Skilled in building responsive and interactive web applications using modern JavaScript frameworks and libraries.</p>
+                    <ul>
+                        <li>HTML5 & CSS3</li>
+                        <li>JavaScript (ES6+)</li>
+                        <li>React.js</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Muammar Nur Hakim. All Rights Reserved.</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>

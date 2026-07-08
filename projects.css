@@ -1,0 +1,131 @@
+/* =========================================
+   STYLING KHUSUS HALAMAN PROJECTS
+   ========================================= */
+main {
+    max-width: 1000px; /* Diperlebar sedikit agar kartu proyek lebih luas */
+    margin: 0 auto;
+    padding: 40px 20px;
+    color: #333;
+    min-height: calc(100vh - 180px);
+}
+
+.projects-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.projects-header h1 {
+    font-size: 2.5rem;
+    color: #0a5b76;
+    margin-bottom: 15px;
+}
+
+.projects-header p {
+    font-size: 1.15rem;
+    color: #555;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* --- GRID PROYEK --- */
+.projects-grid {
+    display: grid;
+    /* Membuat grid responsif: Minimal lebar kartu 300px, maksimal 1 bagian penuh */
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+/* --- KARTU PROYEK --- */
+.project-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    overflow: hidden; /* Penting agar gambar mengikuti sudut membulat kartu */
+    border: 1px solid #eef2f5;
+    display: flex;
+    flex-direction: column; /* Mengurutkan dari atas ke bawah */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Area Gambar Proyek */
+.project-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+/* Efek zoom perlahan pada gambar saat kartu disorot */
+.project-card:hover .project-image img {
+    transform: scale(1.05);
+}
+
+/* Area Teks Proyek */
+.project-content {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Mendorong tombol ke bawah jika teksnya pendek */
+}
+
+.project-content h2 {
+    font-size: 1.4rem;
+    color: #0a5b76;
+    margin-bottom: 15px;
+}
+
+.project-content p {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    flex-grow: 1; /* Membuat jarak teks dan tags seimbang */
+}
+
+/* --- TAG TEKNOLOGI (TECH STACK) --- */
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 25px;
+}
+
+.tech-tag {
+    background-color: #eef2f5;
+    color: #0a5b76;
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+/* --- TOMBOL DETAIL --- */
+.btn-project {
+    display: inline-block;
+    background-color: #0a5b76;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none; /* Menghilangkan garis bawah pada link */
+    font-weight: bold;
+    font-size: 0.95rem;
+    transition: background-color 0.3s ease;
+    margin-top: auto; /* Mendorong tombol selalu ke bagian paling bawah kartu */
+}
+
+.btn-project:hover {
+    background-color: #074155;
+}

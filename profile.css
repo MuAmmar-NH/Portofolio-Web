@@ -1,0 +1,170 @@
+/* =========================================
+   STYLING KHUSUS HALAMAN PROFIL
+   ========================================= */
+main {
+    max-width: 800px; 
+    margin: 0 auto;
+    padding: 40px 20px;
+    color: #333;
+    min-height: calc(100vh - 180px);
+}
+
+.profile-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.profile-header h1 {
+    font-size: 2.5rem;
+    color: #0a5b76;
+    margin-bottom: 30px;
+}
+
+/* --- KARTU INFORMASI BIODATA --- */
+.profile-info-card {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border-top: 5px solid #0a5b76;
+    text-align: left; /* Mengembalikan teks menjadi rata kiri */
+}
+
+.profile-info-card ul {
+    list-style-type: none; /* Menghilangkan titik bullet */
+    padding: 0;
+    margin: 0;
+}
+
+.profile-info-card li {
+    display: flex;
+    padding: 15px 0;
+    border-bottom: 1px solid #eef2f5;
+    font-size: 1.05rem;
+    line-height: 1.5;
+}
+
+/* Menghilangkan garis bawah di elemen list terakhir */
+.profile-info-card li:last-child {
+    border-bottom: none;
+}
+
+/* Label (Name, Address, dll) */
+.profile-info-card strong {
+    width: 35%; /* Memberikan lebar tetap agar titik dua (imajiner) sejajar */
+    color: #0a5b76;
+    flex-shrink: 0; /* Mencegah label mengecil */
+}
+
+/* Isi Label */
+.profile-info-card span {
+    width: 65%;
+    color: #555;
+}
+
+/* --- STYLING TAG HOBI --- */
+.hobbies-row {
+    align-items: center; /* Memastikan label "Hobi" sejajar di tengah dengan kotak hobi */
+}
+
+.hobby-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 65%;
+}
+
+.hobby-tags .tag {
+    background-color: #eef2f5;
+    color: #0a5b76;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    width: auto; /* Membatalkan turunan width 65% dari span biodata */
+}
+
+/* --- KARTU SKILL (Tetap sama, dirapikan sedikit) --- */
+.skills-section h2 {
+    font-size: 1.8rem;
+    color: #0a5b76;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.skill-card {
+    background-color: #ffffff;
+    padding: 30px 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border-top: 5px solid #0a5b76;
+    transition: transform 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+}
+
+.skill-card h3 {
+    font-size: 1.3rem;
+    color: #0a5b76;
+    margin-bottom: 15px;
+}
+
+.skill-card p {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.skill-card ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.skill-card ul li {
+    font-size: 0.95rem;
+    color: #444;
+    padding: 10px 0;
+    border-bottom: 1px solid #eef2f5;
+}
+
+.skill-card ul li:last-child {
+    border-bottom: none;
+}
+
+/* --- RESPONSIVE UNTUK HP --- */
+@media (max-width: 600px) {
+    .profile-info-card li {
+        flex-direction: column; /* Menyusun label di atas dan isi di bawah pada layar kecil */
+    }
+    
+    .profile-info-card strong, 
+    .profile-info-card span,
+    .hobby-tags {
+        width: 100%;
+    }
+
+    .profile-info-card strong {
+        margin-bottom: 5px;
+    }
+}
+
+/* --- STYLING FOTO PROFIL (LINGKARAN) --- */
+.profile-img {
+    width: 180px;      
+    height: 180px;     
+    border-radius: 50%; 
+    object-fit: cover;  
+    margin: 0 auto 20px auto; 
+    display: block;     
+    border: 4px solid #0a5b76; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
+}

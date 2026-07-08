@@ -1,0 +1,133 @@
+
+/* =========================================
+   STYLING UNTUK AREA MAIN & BOX KARTU
+   ========================================= */
+
+main {
+    max-width: 800px; /* Menyamakan lebar dengan menu header */
+    margin: 0 auto;
+    padding: 60px 20px;
+    color: #333;
+}
+
+/* Jarak untuk Hero Section (Bagian perkenalan awal) */
+.hero-section {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.social-section {
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 40px;
+}
+
+main h1 {
+    font-size: 2.5rem;
+    color: #0a5b76;
+    margin-bottom: 10px;
+}
+
+main h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+main p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+/* --- STYLING BOX AREA (KARTU) --- */
+.box-area {
+    display: flex; /* Membuat gambar dan teks bersebelahan */
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Efek bayangan */
+    margin-bottom: 40px; /* Jarak antar kartu */
+    overflow: hidden; /* Memotong gambar agar sudutnya ikut membulat */
+    border: 1px solid #eef2f5;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efek saat box disorot kursor (opsional) */
+.box-area:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* --- AREA GAMBAR DI KIRI --- */
+.box-image {
+    width: 250px; /* Lebar tetap untuk wadah gambar */
+    flex-shrink: 0; /* Mencegah gambar mengecil saat teks panjang */
+}
+
+.box-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Memastikan gambar proporsional dan tidak gepeng */
+}
+
+/* --- AREA TEKS DI KANAN --- */
+.box-text {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Memosisikan teks tepat di tengah secara vertikal */
+    align-items: flex-start; /* Membuat tombol dan teks rata kiri */
+}
+
+.box-text h1 {
+    font-size: 2rem;
+    margin-top: 0;
+}
+
+/* --- STYLING TOMBOL --- */
+main .btn {
+    flex: none;
+    display: inline-block;
+    background-color: #0a5b76;
+    color: #ffffff;
+    padding: 10px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+main .btn:hover {
+    background-color: #074155;
+}
+
+/* --- RESPONSIVE DESIGN (UNTUK LAYAR HP) --- */
+@media (max-width: 768px) {
+    .box-area {
+        flex-direction: column; /* Gambar pindah ke atas, teks di bawah */
+    }
+    .box-image {
+        width: 100%; /* Gambar menjadi selebar layar hp */
+        height: 200px;
+    }
+}
+
+/* --- STYLING FOTO PROFIL (LINGKARAN) --- */
+.profile-img {
+    width: 180px;      /* Lebar gambar */
+    height: 180px;     /* Tinggi gambar (harus sama dengan lebar agar proporsional) */
+    border-radius: 50%; /* Kunci utama untuk membuat bentuk lingkaran sempurna */
+    object-fit: cover;  /* Mencegah gambar menjadi gepeng/distorsi */
+    margin: 0 auto 20px auto; /* Memposisikan di tengah & memberi jarak 20px ke teks di bawahnya */
+    display: block;     /* Memastikan margin auto bekerja dengan baik */
+    object-position: center top; /* Memastikan bagian tengah gambar tetap terlihat */
+
+    /* Opsional: Tambahan estetika (bisa dihapus jika tidak suka) */
+    border: 4px solid #0a5b76; /* Memberikan bingkai warna biru senada dengan judul */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Memberikan efek bayangan lembut */
+}
+
